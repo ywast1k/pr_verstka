@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Fetured Items</h1>
+    <h2 class="heading">Shop for items based on what we featured in this week</h2>
+    <div class="cart-box">
+       
+        <!-- <div class="bodyContent">
+            <img src="png/1.png" alt="товар 1" srcset="">
+           
+            <div class="item__content">
+                <h4 class="head"> ELLERY X M'O CAPSULE</h4>
+                <p class="other">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                    Ellery teams up with Moda Operandi.</p>
+                <p class="price">$52.00</p>
+
+            </div>
+        </div> -->
+
+
+
+    </div>
+    <script src="data.js"></script>
+    <script>
+
+        const data = JSON.parse(dataInfo);
+
+        const cartBox = document.querySelector('.cart-box');
+
+        data.forEach(element => {
+            
+            const bodyEl = document.createElement('div');
+            bodyEl.classList.add('bodyContent');
+
+            const itemImg = document.createElement('img');
+            itemImg.src = element.url;
+
+            const itemContent = document.createElement('div');
+            itemContent.classList.add('item__content');
+
+            const itemHead = document.createElement('h4');
+            itemHead.classList.add('head');
+            itemHead.textContent = element.name;
+
+            const itemText = document.createElement('p');
+            itemText.classList.add('other');
+            itemText.textContent = element.textInfo;
+
+            const itemPrice = document.createElement('p');
+            itemPrice.classList.add('price');
+            itemPrice.textContent = `$${element.price}`;
+
+
+            cartBox.appendChild(bodyEl);
+            bodyEl.appendChild(itemImg);
+            bodyEl.appendChild(itemContent);
+            itemContent.appendChild(itemHead);
+            itemContent.appendChild(itemText);
+            itemContent.appendChild(itemPrice);
+
+
+
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

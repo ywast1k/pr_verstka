@@ -1,0 +1,48 @@
+.cart-box {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки равной ширины */
+  gap: 20px; 
+  width: 1200px;
+  margin:auto;
+  object-fit: contain;
+
+}
+
+.heading {
+    text-align: center;
+
+}
+
+h2 {
+    color: #9F9F9F;
+}
+
+.bodyContent {
+    overflow: hidden; 
+    width: 360px;
+    height: 587px;
+    background-color: #efeeec5e;
+}
+
+img {
+       
+    height:360px;
+    width: 420px;
+   margin:auto;
+    object-fit: contain;
+}
+
+.item__content {
+    padding-left: 10px;
+   
+}
+
+.other {
+    color: #5D5D5D;
+    ;
+}
+
+.price {
+    color: #F16D7F;
+
+}
