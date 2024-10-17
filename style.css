@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .cart-box {
     display: grid;
   grid-template-columns: repeat(3, 1fr); /* Три колонки равной ширины */
@@ -45,4 +50,66 @@ img {
 .price {
     color: #F16D7F;
 
+}
+
+.add-cart{
+    padding: 64px;
+
+}
+
+.item {
+    width: 652px;
+    box-shadow: 17px 19px 24px rgba(0,0,0,0.13); /* Тень вокруг всего контейнера */
+    display: flex;
+    overflow: hidden;
+    }
+
+.imgPay{
+    height: 306px;
+    width: 50%;
+    object-fit: cover;
+
+}
+.item_content{
+    padding: 22px 31px;
+    background-color: white;
+}
+.item_heading{
+    width: 262px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color:black;
+    margin-bottom: 42px;
+
+}
+
+.item_text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #575757;
+    margin-bottom: 6px;
+
+}
+.item_input{
+    width: 44px;
+    height: 24.95px;
+    border: 1px solid #EAEAEA ;
+text-align: center;
+padding-left: 8px;
+padding-left: 8px;
+box-sizing: border-box;
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size:22px;
+line-height: 22px;
+color: #656565;
+margin-left: 24px;
+}
+.item_prColor{
+    color:#F16D7F;
 }
