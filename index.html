@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -34,64 +35,25 @@
     <div class="add-cart">
         <div class="item">
             <img class="imgPay" src="png/1.png" alt="товар1">
+            
             <div class="item_content">
                 <h3 class="item_heading">Mango people t-shirt</h3>
                 <p class="item_text">Price:<span class="item_prColor">$300</span></p>
                 <p class="item_text">Color:Red</p>
-                <p class="item_text">Size: XL</p>
+                <p class="item_text">Size: XL</p>    
                 <div class="item_text">Quantity: <input class= "item_input" type="text" value="2"></div>
+                
             </div>
+            <button class="buttonRem">X</button>
+            
         </div>
+        
     </div>
 
 
 
     <script src="data.js"></script>
-    <script>
-
-        const data = JSON.parse(dataInfo);
-
-        const cartBox = document.querySelector('.cart-box');
-
-        data.forEach(element => {
-            
-            const bodyEl = document.createElement('div');
-            bodyEl.classList.add('bodyContent');
-
-            const itemImg = document.createElement('img');
-            itemImg.src = element.url;
-
-            const itemContent = document.createElement('div');
-            itemContent.classList.add('item__content');
-
-            const itemHead = document.createElement('h4');
-            itemHead.classList.add('head');
-            itemHead.textContent = element.name;
-
-            const itemText = document.createElement('p');
-            itemText.classList.add('other');
-            itemText.textContent = element.textInfo;
-
-            const itemPrice = document.createElement('p');
-            itemPrice.classList.add('price');
-            itemPrice.textContent = `$${element.price}`;
-
-
-            cartBox.appendChild(bodyEl);
-            bodyEl.appendChild(itemImg);
-            bodyEl.appendChild(itemContent);
-            itemContent.appendChild(itemHead);
-            itemContent.appendChild(itemText);
-            itemContent.appendChild(itemPrice);
-
-
-
-
-        });
-
-
-
-    </script>
+    <script src="main.js"></script>
 
 </body>
 
