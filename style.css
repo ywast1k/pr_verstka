@@ -70,7 +70,7 @@
     padding-top: 2px;
     height: 360px;
     width: 650px;
-    box-shadow: 17px 19px 24px rgba(0,0,0,0.13); /* Тень вокруг всего контейнера */
+    box-shadow: 17px 19px 24px rgba(0,0,0,0.13); 
     display: flex;
     overflow: hidden;
     

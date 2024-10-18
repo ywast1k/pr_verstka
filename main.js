@@ -1,9 +1,17 @@
 const data = JSON.parse(dataInfo);
 const cartBox = document.querySelector('.cart-box');
 
+// Функция добавления товара в корзину
+function addToCart(item) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log('Товар добавлен в корзину:', item);
+}
+
 data.forEach(element => {
     const bodyEl = document.createElement('div');
-    bodyEl.classList.add('bodyContent'); // Добавляем класс container
+    bodyEl.classList.add('bodyContent'); 
 
     const itemImg = document.createElement('img');
     itemImg.src = element.url;
@@ -50,4 +58,3 @@ data.forEach(element => {
     itemContent.appendChild(itemText);
     itemContent.appendChild(itemPrice);
 });
-
