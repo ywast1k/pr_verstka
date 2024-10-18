@@ -32,6 +32,16 @@ data.forEach(element => {
     const buttonText = document.createTextNode(' Add to Cart');
     button.appendChild(buttonText);
 
+    button.addEventListener('click', () => {
+        addToCart({
+            name: element.name,
+            price: element.price,
+            url: element.url,
+            color: element.color,
+            size: element.size
+        });
+    });
+
     cartBox.appendChild(bodyEl);
     bodyEl.appendChild(itemImg);
     bodyEl.appendChild(itemContent);
@@ -40,3 +50,4 @@ data.forEach(element => {
     itemContent.appendChild(itemText);
     itemContent.appendChild(itemPrice);
 });
+
