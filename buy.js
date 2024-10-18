@@ -19,6 +19,9 @@ function displayCartItems() {
     const cartItems = getCart();
     const addCart = document.querySelector('.add-cart');
     addCart.innerHTML = ''; // Очистка текущего содержимого
+
+  
+
     cartItems.forEach((element, index) => {
         const buyEl = document.createElement('div');
         buyEl.classList.add('item');
